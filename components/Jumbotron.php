@@ -28,7 +28,7 @@ class Jumbotron extends ComponentBase
 
     public function getJumbotronOptions()
     {
-        return JumbotronModel::all()->lists('slug', 'title');
+        return JumbotronModel::all()->lists('title', 'slug');
     }
 
 	public function getJumbotron()
