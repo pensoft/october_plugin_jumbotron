@@ -1,0 +1,58 @@
+fields:
+    title:
+        label: Text
+        span: left
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: right
+        type: text
+        preset:
+            field: title
+            type: slug
+    body:
+        label: 'Body'
+        size: ''
+        span: left
+        type: richeditor
+    image:
+        label: Image
+        mode: image
+        useCaption: true
+        fileTypes: svg,png,jpg
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+    mobile_image:
+        label: 'Image mobile version'
+        mode: image
+        useCaption: true
+        fileTypes: svg,png,jpg
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+    button_name:
+        label: 'Button name'
+        type: text
+        span: left
+    url:
+        label: 'Action button'
+        type: text
+        span: left
+        comment: Paste link here
+    url_target:
+        label: 'Specifies how to open the link'
+        type: dropdown
+        span: left
+        default: _blank
+        options:
+            _blank: Blank
+            _parent: Parent
+            _self: Self
+            _top: Top
+

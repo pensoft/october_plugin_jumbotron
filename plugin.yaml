@@ -1,0 +1,12 @@
+plugin:
+    name: 'pensoft.jumbotron::lang.plugin.name'
+    description: 'pensoft.jumbotron::lang.plugin.description'
+    author: 'Pensoft'
+    icon: icon-leaf
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Jumbotron
+        url: pensoft/jumbotron/jumbotroncontroller
+        icon: icon-leaf
+        order: '1'

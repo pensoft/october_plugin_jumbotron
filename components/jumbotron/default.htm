@@ -1,0 +1,22 @@
+<div class="container-fluid banner bg-secondary">
+	<div class="container">
+			{% if __SELF__.getJumbotron().title %}
+			<h1 class="display-1">{{__SELF__.getJumbotron().title}}</h1>
+			{% endif %}
+			{{__SELF__.getJumbotron().body|raw}}
+
+			{% if __SELF__.getJumbotron().image.path %}
+				<img src="{{__SELF__.getJumbotron().image.path}}" data-aos="fade-up" />
+			{% endif %}
+
+			{% if __SELF__.getJumbotron().url %}
+				<a href="{{__SELF__.getJumbotron().url}}" target="{{__SELF__.getJumbotron().url_target}}" class="btn btn-primary">
+				{% if __SELF__.getJumbotron().button_name %}
+					{{__SELF__.getJumbotron().button_name}}
+				{% else %}
+					{{trans('pensoft.jumbotron::lang.button')}}
+				{% endif%}
+				</a>
+			{% endif %}
+	</div>
+</div>

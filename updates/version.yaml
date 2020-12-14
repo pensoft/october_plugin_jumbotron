@@ -1,0 +1,4 @@
+1.0.1: 'First version of Jumbotron'
+1.0.2:
+    - 'Created table pensoft_jumbotron'
+    - builder_table_create_pensoft_jumbotron.php

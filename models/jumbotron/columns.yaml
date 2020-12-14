@@ -1,0 +1,14 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+    body:
+        label: Body
+        type: partial
+        path: $/pensoft/jumbotron/partials/_body.htm
+        searchable: true
+    image:
+        label: Image
+        type: partial
+        path: $/pensoft/jumbotron/partials/_image.htm
