@@ -7,6 +7,5 @@ plugin:
 navigation:
     main-menu-item:
         label: Jumbotron
-        url: pensoft/jumbotron/jumbotroncontroller
+        url: pensoft/jumbotron/jumbotron
         icon: icon-leaf
-        order: '1'

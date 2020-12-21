@@ -56,22 +56,4 @@ class Plugin extends PluginBase
             ],
         ];
     }
-
-    /**
-     * Registers back-end navigation items for this plugin.
-     *
-     * @return array
-     */
-    public function registerNavigation()
-    {
-        return [
-            'jumbotron' => [
-                'label'       => 'Jumbotron',
-                'url'         => Backend::url('pensoft/jumbotron/jumbotroncontroller'),
-                'icon'        => 'icon-leaf',
-                'permissions' => ['pensoft.jumbotron.*'],
-                'order'       => 500,
-            ],
-        ];
-    }
 }
