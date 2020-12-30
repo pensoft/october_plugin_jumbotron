@@ -23,7 +23,22 @@ class Jumbotron extends ComponentBase
                 'description' => 'Please select your jumbotron',
                 'type' => 'dropdown',
             ],
+            'title' => [
+                'title' => 'Show title',
+                'type' => 'checkbox',
+                'default' => false
+            ],
+            'background' => [
+                'title' => 'Set background HEX color',
+                'type' => 'string',
+                'default' => null
+            ],
         ];
+    }
+
+    public function hasBackground()
+    {
+        return !is_null($this->property('background', null));
     }
 
     public function getJumbotronOptions()
