@@ -1,0 +1,22 @@
+<div class="col-xs-12 col-md-3 jumbotron-item">
+	<div class="jumbotron_column">
+		{% if jumbotron.title and __SELF__.property('title') %}
+		<h1 class="display-1">{{jumbotron.title}}</h1>
+		{% endif %}
+		{{jumbotron.body|raw}}
+
+		{% if jumbotron.image.path %}
+		<img src="{{jumbotron.image.path}}" data-aos="fade-up" />
+		{% endif %}
+
+		{% if jumbotron.url %}
+		<a href="{{jumbotron.url}}" target="{{jumbotron.url_target}}" class="btn btn-primary">
+			{% if jumbotron.button_name %}
+			{{jumbotron.button_name}}
+			{% else %}
+			{{trans('pensoft.jumbotron::lang.button')}}
+			{% endif%}
+		</a>
+		{% endif %}
+	</div>
+</div>
