@@ -38,6 +38,10 @@ class Jumbotron extends ComponentBase
 				'type' => 'dropdown',
 				'default' => 'template1'
 			],
+			'description_limit' => [
+				'title' => 'Description limit',
+				'default' => 0
+			],
         ];
     }
 
