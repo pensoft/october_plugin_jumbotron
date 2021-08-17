@@ -12,15 +12,15 @@ fields:
             field: title
             type: slug
     body:
-        label: 'Body'
-        size: ''
+        label: 'pensoft.jumbotron::lang.plugin.description'
+        size: huge
         span: left
         type: richeditor
     image:
         label: Image
         mode: image
         useCaption: true
-        fileTypes: svg,png,jpg
+        fileTypes: 'svg,png,jpg'
         thumbOptions:
             mode: crop
             extension: auto
@@ -30,7 +30,7 @@ fields:
         label: 'Image mobile version'
         mode: image
         useCaption: true
-        fileTypes: svg,png,jpg
+        fileTypes: 'svg,png,jpg'
         thumbOptions:
             mode: crop
             extension: auto
@@ -44,7 +44,7 @@ fields:
         label: 'Action button'
         type: text
         span: left
-        comment: Paste link here
+        comment: 'Paste link here'
     url_target:
         label: 'Specifies how to open the link'
         type: dropdown
@@ -55,4 +55,3 @@ fields:
             _parent: Parent
             _self: Self
             _top: Top
-

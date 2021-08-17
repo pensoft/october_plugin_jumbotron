@@ -2,3 +2,8 @@
 1.0.2:
     - 'Created table pensoft_jumbotron'
     - builder_table_create_pensoft_jumbotron.php
+1.0.3:
+    - 'Update ckeditor fields'
+1.0.4:
+    - 'New template'
+

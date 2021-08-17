@@ -33,8 +33,25 @@ class Jumbotron extends ComponentBase
                 'type' => 'string',
                 'default' => null
             ],
+			'templates' => [
+				'title' => 'Select templates',
+				'type' => 'dropdown',
+				'default' => 'template1'
+			],
+			'description_limit' => [
+				'title' => 'Description limit',
+				'default' => 0
+			],
         ];
     }
+
+	public function getTemplatesOptions()
+	{
+		return [
+			'template1' => 'Template 1',
+			'template2' => 'Template 2',
+		];
+	}
 
     public function hasBackground()
     {
