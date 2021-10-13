@@ -1,11 +1,25 @@
 <?php namespace Pensoft\Jumbotron\Components;
 
+use Backend\Facades\BackendAuth;
 use Cms\Classes\ComponentBase;
 use Pensoft\Jumbotron\Models\Jumbotron as JumbotronModel;
 
 class Jumbotron extends ComponentBase
 {
-    public function componentDetails()
+
+	public $loggedIn;
+
+	public function onRun()
+	{
+		// by default users are not logged in
+		$this->loggedIn = false;
+		// end then if getUser returns other value than NULL then our user is logged in
+		if (!empty(BackendAuth::getUser())) {
+			$this->loggedIn = true;
+		}
+	}
+
+	public function componentDetails()
     {
         return [
             'name'        => 'Jumbotron',

@@ -13,7 +13,7 @@ fields:
             type: slug
     body:
         label: 'pensoft.jumbotron::lang.plugin.description'
-        size: huge
+        size: large
         span: left
         type: richeditor
     image:
