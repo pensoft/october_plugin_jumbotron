@@ -83,7 +83,7 @@ class Jumbotron extends ComponentBase
 
         if (class_exists('\Jenssegers\Agent\Agent')) {
             $Agent = new \Jenssegers\Agent\Agent();
-            if ($Agent->isMobile() && $jumbotron->mobile_image) {
+            if ($Agent->isMobile() && $jumbotron && $jumbotron->mobile_image) {
                 $jumbotron->image = $jumbotron->mobile_image;
             }
         }
