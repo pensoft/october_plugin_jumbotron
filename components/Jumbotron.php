@@ -50,7 +50,7 @@ class Jumbotron extends ComponentBase
 			'templates' => [
 				'title' => 'Select templates',
 				'type' => 'dropdown',
-				'default' => 'template1'
+				'default' => 'template3'
 			],
 			'description_limit' => [
 				'title' => 'Description limit',
@@ -64,6 +64,7 @@ class Jumbotron extends ComponentBase
 		return [
 			'template1' => 'Template 1',
 			'template2' => 'Template 2',
+			'template3' => 'Template 3',
 		];
 	}
 
