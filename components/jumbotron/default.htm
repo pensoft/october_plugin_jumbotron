@@ -3,5 +3,5 @@
 	has_background = __SELF__.hasBackground()
 %}
 {% if __SELF__.loggedIn %}
-<p><a class="edit-link" href="/admin/pensoft/jumbotron/jumbotron/update/{{__SELF__.getJumbotron().id}}" target="_blank">Edit</a></p>
+<p><a class="edit-link" href="/admin/pensoft/jumbotron/jumbotron/update/{{__SELF__.getJumbotron().id}}" target="_blank">{{'Edit' |_}}</a></p>
 {% endif %}
