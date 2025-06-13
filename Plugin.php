@@ -22,7 +22,7 @@ class Plugin extends PluginBase
             });
         });
     }
-    
+
     /**
      * @var array Plugin dependencies
      */
@@ -68,6 +68,18 @@ class Plugin extends PluginBase
             'pensoft.jumbotron.permission' => [
                 'tab' => 'Jumbotron',
                 'label' => 'Permission'
+            ],
+        ];
+    }
+
+    public function registerNavigation()
+    {
+        return [
+            'main-menu-item' => [
+                'label'       => 'Jumbotron',
+                'url'         => \Backend::url('pensoft/jumbotron/jumbotron'),
+                'icon'        => 'icon-leaf',
+                'permissions' => ['pensoft.jumbotron.*'],
             ],
         ];
     }
