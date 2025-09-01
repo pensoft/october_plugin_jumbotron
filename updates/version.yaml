@@ -20,4 +20,5 @@
     - 'revision partial'
 1.0.11:
     - 'Permissions'
-
+1.0.12:
+    - 'Added gitignore'
