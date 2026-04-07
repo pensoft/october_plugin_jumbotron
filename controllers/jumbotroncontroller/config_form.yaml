@@ -1,0 +1,10 @@
+name: JumbotronController
+form: $/pensoft/jumbotron/models/jumbotron/fields.yaml
+modelClass: Pensoft\Jumbotron\Models\Jumbotron
+defaultRedirect: pensoft/jumbotron/jumbotroncontroller
+create:
+    redirect: 'pensoft/jumbotron/jumbotroncontroller/update/:id'
+    redirectClose: pensoft/jumbotron/jumbotroncontroller
+update:
+    redirect: pensoft/jumbotron/jumbotroncontroller
+    redirectClose: pensoft/jumbotron/jumbotroncontroller
