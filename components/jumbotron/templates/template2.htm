@@ -1,0 +1,23 @@
+<div class="col-xs-12 jumbotron-item">
+	<div class="jumbotron_column">
+		{% if jumbotron.title and __SELF__.property('title') %}
+		<h1 class="display-1">{{jumbotron.title}}</h1>
+		{% endif %}
+
+		{% if __SELF__.property('description_limit') == 0 %}
+		{{jumbotron.body|raw}}
+		{% else %}
+		{% set limit = __SELF__.property('description_limit') %}
+		{{ jumbotron.body|length > limit ? jumbotron.body|striptags|slice(0, limit)| replace({'&amp;': '&'}) ~ '...' : jumbotron.body|raw  }}
+		{% if jumbotron.url %}
+			<a href="{{jumbotron.url}}" target="{{jumbotron.url_target}}" class="btn btn-primary">
+			{% if jumbotron.button_name %}
+				{{jumbotron.button_name}}
+				{% else %}
+				{{trans('pensoft.jumbotron::lang.button')}}
+				{% endif%}
+			</a>
+			{% endif %}
+		{% endif %}
+	</div>
+</div>
