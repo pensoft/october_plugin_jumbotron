@@ -17,5 +17,10 @@
 1.0.9:
     - 'Translate'
 1.0.10:
+    - 'revision partial'
+1.0.11:
+    - 'Permissions'
+1.0.12:
+    - 'Added gitignore'
+1.0.13:
     - 'WCAG 2'
-
