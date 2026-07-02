@@ -5,7 +5,7 @@
 		{% if jumbotron.title and __SELF__.property('title') %}
 		<h2 class="display-1">{{jumbotron.title}}</h2>
 		{% endif %}
-		{{jumbotron.body|raw}}
+		{{jumbotron.body|ensure_img_alt|raw}}
 
 		{% if jumbotron.image.path %}
 		<img src="{{jumbotron.image.path}}" data-aos="fade-up" />

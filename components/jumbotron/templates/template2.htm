@@ -7,10 +7,10 @@
 		{% endif %}
 
 		{% if __SELF__.property('description_limit') == 0 %}
-		{{jumbotron.body|raw}}
+		{{jumbotron.body|ensure_img_alt|raw}}
 		{% else %}
 		{% set limit = __SELF__.property('description_limit') %}
-		{{ jumbotron.body|length > limit ? jumbotron.body|striptags|slice(0, limit)| replace({'&amp;': '&'}) ~ '...' : jumbotron.body|raw  }}
+		{{ jumbotron.body|length > limit ? jumbotron.body|striptags|slice(0, limit)| replace({'&amp;': '&'}) ~ '...' : jumbotron.body|ensure_img_alt|raw  }}
 		{% if jumbotron.url %}
 			<a href="{{jumbotron.url}}" target="{{jumbotron.url_target}}" class="btn btn-primary">
 			{% if jumbotron.button_name %}
