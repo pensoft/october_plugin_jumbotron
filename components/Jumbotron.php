@@ -34,11 +34,35 @@ class Jumbotron extends ComponentBase
                 'type' => 'checkbox',
                 'default' => false
             ],
+            'background' => [
+                'title' => 'Set background HEX color',
+                'type' => 'string',
+                'default' => null
+            ],
+            'templates' => [
+                'title' => 'Select templates',
+                'type' => 'dropdown',
+                'default' => 'template3'
+            ],
             'description_limit' => [
                 'title' => 'Description limit',
                 'default' => 0
             ],
         ];
+    }
+
+    public function getTemplatesOptions(): array
+    {
+        return [
+            'template1' => 'Template 1',
+            'template2' => 'Template 2',
+            'template3' => 'Template 3',
+        ];
+    }
+
+    public function hasBackground(): bool
+    {
+        return !is_null($this->property('background', null));
     }
 
     public function getJumbotronOptions(): array

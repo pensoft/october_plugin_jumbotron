@@ -1,24 +1,10 @@
 {% set jumbotron = __SELF__.getJumbotron() %}
 {% if jumbotron %}
-        {% if jumbotron.title and __SELF__.property('title') %}
-        <h2 class="display-1">{{jumbotron.title}}</h2>
-        {% endif %}
-        {{jumbotron.body|raw}}
-
-        {% if jumbotron.image.path %}
-        <img src="{{jumbotron.image.path}}" data-aos="fade-up" />
-        {% endif %}
-
-        {% if jumbotron.url %}
-        <a href="{{jumbotron.url}}" target="{{jumbotron.url_target}}" class="btn btn-primary">
-            {% if jumbotron.button_name %}
-            {{jumbotron.button_name}}
-            {% else %}
-            Button
-            {% endif%}
-        </a>
-        {% endif %}
+{% partial __SELF__ ~ "::templates/" ~ (__SELF__.property('templates') ?: 'template3')
+    jumbotron = jumbotron
+    has_background = __SELF__.hasBackground()
+%}
 {% if __SELF__.loggedIn %}
-<p><a class="edit-link" href="/admin/pensoft/jumbotron/jumbotron/update/{{jumbotron.id}}" target="_blank">{{'Edit' |_}}</a></p>
+<p><a class="edit-link" href="/admin/pensoft/jumbotron/jumbotron/update/{{ jumbotron.id }}" target="_blank">{{ 'Edit'|_ }}</a></p>
 {% endif %}
 {% endif %}
