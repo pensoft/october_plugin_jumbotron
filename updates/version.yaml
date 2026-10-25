@@ -22,6 +22,10 @@
     - 'Permissions'
 1.0.12:
     - 'Added gitignore'
+1.0.13:
+    - 'WCAG 2'
+1.0.14:
+    - 'WCAG 2'
 
 4.0.1:
     - 'Migrated to OctoberCMS 4 and PHP 8.2'
